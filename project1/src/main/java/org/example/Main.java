@@ -20,8 +20,11 @@ public class Main {
         p.print();
         p=new Child2();
         p.print();
+
     //program for an Enum which has private constructor  which accepts two args
         Helper h=Helper.A1;
         System.out.println(h.getElement());
+
+
     }
 }
