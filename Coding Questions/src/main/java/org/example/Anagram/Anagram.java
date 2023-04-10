@@ -1,11 +1,10 @@
 package org.example.Anagram;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Anagram {
     public static boolean isAnagram(String s,String t){
-        char a[]=s.toCharArray(),b[]=t.toCharArray();
+        char[] a =s.toCharArray(),b =t.toCharArray();
         Arrays.sort(a);
         Arrays.sort(b);
         s=String.valueOf(a);

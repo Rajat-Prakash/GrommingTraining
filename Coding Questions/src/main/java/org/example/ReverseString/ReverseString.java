@@ -7,7 +7,7 @@ import java.util.List;
 public class ReverseString {
 
     public static String reverseString(String str){
-        char ch[] =str.toCharArray();
+        char[] ch =str.toCharArray();
         int start=0,end=str.length()-1;
         while(start<end)
         {

@@ -17,7 +17,7 @@ public class VowelStrings {
     }
 
     public static void main(String[] args) {
-        String words[] = {"hey","aeo","mu","ooo","artro"};
+        String[] words = {"hey","aeo","mu","ooo","artro"};
         System.out.println(vowelStrings(words,0,4));
     }
 }
