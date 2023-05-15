@@ -3,7 +3,7 @@ package org.example.SequenceUsing3Threads;
 public class PrintSequenceUsingThreeThreads {
     private static int N = 10;
     private static int counter = 1;
-    private static Object lock = new Object();
+    private static final Object lock = new Object();
 
     public static void main(String[] args) {
         Thread t1 = new Thread(new Printer(0));
@@ -16,7 +16,7 @@ public class PrintSequenceUsingThreeThreads {
     }
 
     static class Printer implements Runnable {
-        private int id;
+        private final int id;
 
         public Printer(int id) {
             this.id = id;
@@ -31,11 +31,6 @@ public class PrintSequenceUsingThreeThreads {
                     }
                     if (counter % 3 == id) {
                         System.out.println("Thread " + id + ": " + counter++);
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
                     }
                 }
             }

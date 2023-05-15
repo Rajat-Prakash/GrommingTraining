@@ -28,9 +28,12 @@ class Customer{
         notifyAll();
     }
     public static void main(String[] args){
-        final Customer c=new Customer(10000);
-        new Thread(() -> c.withdraw(15000)).start();
-        new Thread(() -> c.withdraw(12000)).start();
-        new Thread(() -> c.deposit(30000)).start();
+          Customer c=new Customer(10000);
+          Thread withdraw=new Thread(()->{
+              c.withdraw(1000);
+        });
+//        new Thread(() -> c.withdraw(15000)).start();
+//        new Thread(() -> c.withdraw(12000)).start();
+//        new Thread(() -> c.deposit(30000)).start();
     }
 }

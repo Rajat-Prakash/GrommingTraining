@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class BlockingQueueExample {
 
     public static void main(String[] args) {
-        BlockingQueue<String> queue = new ArrayBlockingQueue<>(10);
+        BlockingQueue<String> queue = new ArrayBlockingQueue<>(5);
         Thread producer = new Thread(() -> {
             try {
                 AtomicInteger i=new AtomicInteger(1);

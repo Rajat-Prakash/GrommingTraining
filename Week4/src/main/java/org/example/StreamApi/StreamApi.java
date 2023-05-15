@@ -20,8 +20,7 @@ public class StreamApi {
         System.out.println(list);
 
         System.out.println(
-                list.stream()
-                        .reduce(0,Integer::sum));
+                list.stream().reduce(0,(x,y)->x+y));
         System.out.println("count : "+ integers.stream()
                 .filter(x->x%2==0)
                 .count());
